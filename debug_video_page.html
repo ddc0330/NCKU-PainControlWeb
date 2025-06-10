@@ -1,0 +1,2087 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="https://ogp.me/ns/fb#">
+<head>
+
+			<script data-ad-client="ca-pub-4877192405940311" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	
+<title>ShareCourse 學聯網</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<!-- Hotjar Tracking Code for www.sharecourse.net -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:425310,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+	<meta property="og:title" content="ShareCourse" />
+<meta property="og:type" content="website" />
+
+	<meta property="og:image:width" content="120"> 	<meta property="og:image:height" content="120"> <meta property="og:url" content="https://www.sharecourse.net/sharecourse/" />
+
+<meta property="og:site_name" content="ShareCourse 學聯網" />
+<meta property="fb:app_id" content="435176376547357" />
+
+
+<link rel="shortcut icon" type="image/x-icon" href="https://www.sharecourse.net/sharecourse/libraries/images/icon_square.ico" />
+<link href="https://www.sharecourse.net/sharecourse/libraries/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="https://www.sharecourse.net/sharecourse/libraries/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+
+<link href="https://www.sharecourse.net/sharecourse/libraries/template_resource/template/default.css" rel="stylesheet" type="text/css" />
+<link href="https://www.sharecourse.net/sharecourse/libraries/template_resource/template/templatemo_style.css" rel="stylesheet" type="text/css" />
+<!-- <link type="text/css" href='https://www.sharecourse.net/sharecourse/libraries/css/smoothness/jquery-ui-1.8.22.custom.css'rel="stylesheet" /> -->
+<link type="text/css" href='https://www.sharecourse.net/sharecourse/libraries/css/smoothness/jquery-ui-1.12.1.css'rel="stylesheet" />
+
+
+<link rel="stylesheet" href="https://www.sharecourse.net/sharecourse/libraries/css/style-bs2.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+
+
+
+	<!---->
+		<script src="https://player.vimeo.com/api/player.js"></script> <!--  vimeo API -->
+		<SCRIPT>
+
+		//nowRate 用來存放影片播放速率
+		nowRate = '1'; // 預設為1倍
+
+		function leave_page_event(cb)
+		  {
+		  		seconds='';
+				/*
+			//step1  取得vimeo播放器速率
+				var vimeo_iframe = document.getElementById('videoFrame');
+				var vimeo_player = new Vimeo.Player(vimeo_iframe);
+				//nowRate 用來存放影片播放速率
+				//nowRate = '1'; // 預設為1倍
+
+				//偵測影片播放速率
+				vimeo_player.getPlaybackRate().then(function(playbackRate) {
+						console.log('playbackRate:', playbackRate);
+						nowRate = playbackRate; //取得當下影片播放速率
+						// playbackRate = a numeric value of the current playback rate
+					})
+
+				//偵測影片長度(秒)
+				vimeo_player.getDuration().then(function(duration) {
+						console.log('Duration:', duration);
+						video_time = duration; //取得當下影片長度
+				   // duration = the duration of the video in seconds
+					})
+				*/
+			//step2  傳送資料回server
+
+				//setTimeout(function () {	// 延遲1秒才執行 # Start
+					//alert('進入執行send_button 網頁停留時間='+second+'秒，Vimeo播放速率='+nowRate+'倍，影片長度='+video_time+'秒');
+					//window.open('https://www.sharecourse.net/sharecourse/', 'new_window', config='height=500,width=500');
+					$.ajax({
+						//url: "https://www.sharecourse.net/sharecourse/course/content/page_life_time/2/"+second+"/"+nowRate+"/", 		//傳送目的地
+						url: "https://www.sharecourse.net/sharecourse/course/content/page_life_time/11579402/"+second+"/"+nowRate+"/",		//傳送目的地 (learning_log_id , 停留時間, 播放速率)
+						type: "POST", 			//傳送方式
+						dataType: "json",		//資料格式
+						success: function(data){
+							if (cb) {
+								console.log('紀錄');
+								cb();
+							}
+						}
+					});
+				//}, 1000);  //測試延遲1秒才執行	# End
+
+		  }
+		</SCRIPT>
+	
+
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/flatdatepicker/flatpickr.js'></script>
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/js/jquery-1.7.1.min.js'></script>
+<!-- <script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/js/jquery-ui-1.8.16.custom.min.js'></script> -->
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/js/jquery-ui-1.12.1.min.js'></script>
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/bootstrap/js/bootstrap.js'></script><!-- 20200819 test1-->
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/js/jquery.validate-tw.js'></script>
+<script type="text/javascript" src="https://www.sharecourse.net/sharecourse/libraries/js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/js/jquery.cookie.js'></script>
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/js/jquery.tinysort.min.js'></script>
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/ckeditor/ckeditor.js'></script>
+<script type="text/javascript" src="https://www.sharecourse.net/sharecourse/libraries/js/jquery.blockUI-tw.js"></script>
+<link type="text/css" href='https://www.sharecourse.net/sharecourse/libraries/flatdatepicker/themes/material_blue.css' rel="stylesheet" />
+<script type="text/javascript" src="https://www.sharecourse.net/sharecourse/libraries/plugin/shareCourseAnalytic.js"></script>
+
+
+
+
+<script type="text/javascript" src='https://www.sharecourse.net/sharecourse/libraries/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+<script src="https://www.sharecourse.net/sharecourse/libraries/ckeditor/plugins/wordcount/plugin.js"></script>
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  config: ["MMLorHTML.js"],
+
+	  styleSheets: [],
+	  styles: {},
+
+	  jax: ["input/TeX"],
+
+	  extensions: ["tex2jax.js"],
+
+	  preJax: null,
+	  postJax: null,
+
+	  preRemoveClass: "MathJax_Preview",
+
+	  showProcessingMessages: true,
+
+	  messageStyle: "none",
+
+	  displayAlign: "center",
+	  displayIndent: "0em",
+
+	  delayStartupUntil: "none",
+
+	  skipStartupTypeset: false,
+
+	  elements: [],
+
+	  tex2jax: {
+			inlineMath: [
+						 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+						 ['\\(','\\)']
+						 ],
+
+						 displayMath: [
+						 ['\\[','\\]']
+						 ],
+
+		skipTags: ["script","noscript","style","textarea","pre","code"],
+		ignoreClass: "tex2jax_ignore",
+		processClass: "tex2jax_process",
+		processEscapes: false,
+		processEnvironments: true,
+		preview: "TeX"
+
+	  },
+
+	  mml2jax: {
+		preview: "alttext"
+
+	  },
+
+	  jsMath2jax: {
+		preview: "TeX"
+
+	  },
+
+	  TeX: {
+		TagSide: "right",
+		TagIndent: ".8em",
+		MultLineWidth: "85%",
+		Macros: {},
+
+		extensions: ["AMSmath.js", "AMSsymbols.js"]
+
+	  },
+
+	  //============================================================================
+	  //
+	  //  These parameters control the MathML inupt jax.
+	  //
+	  MathML: {
+		//
+		//  This specifies whether to use TeX spacing or MathML spacing when the
+		//  HTML-CSS output jax is used.
+		//
+		useMathMLspacing: false
+	  },
+
+	  //============================================================================
+	  //
+	  //  These parameters control the HTML-CSS output jax.
+	  //
+	  "HTML-CSS": {
+
+		scale: 75,
+
+		availableFonts: ["STIX","TeX"],
+
+		preferredFont: "TeX",
+
+		webFont: "TeX",
+
+		imageFont: "TeX",
+
+		undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+
+		showMathMenu: true,
+
+		styles: {},
+
+		tooltip: {
+		  delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+		  delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+		  offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+		}
+	  },
+
+	  //============================================================================
+	  //
+	  //  These parameters control the NativeMML output jax.
+	  //
+	  NativeMML: {
+
+		scale: 100,
+
+		showMathMenu: true,
+		showMathMenuMSIE: true,
+
+		styles: {}
+	  },
+
+	  MathMenu: {
+		delay: 400,
+
+		helpURL: "https://www.mathjax.org/help/user/",
+
+		showRenderer: true,
+		showFontMenu: false,
+		showContext:  false,
+
+		windowSettings: {
+		  status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+		  directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+		  width: 100, height: 50
+		},
+
+		styles: {}
+
+	  },
+
+	  MMLorHTML: {
+		prefer: {
+		  MSIE:    "MML",
+		  Firefox: "MML",
+		  Opera:   "HTML",
+		  other:   "HTML"
+		}
+	  }
+	});
+
+	//判斷瀏覽器
+	var nVer = navigator.appVersion;
+	var nAgt = navigator.userAgent;
+	var browserName  = '';
+	var fullVersion  = 0;
+	var majorVersion = 0;
+
+	if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+		browserName  = "Microsoft Internet Explorer";
+		fullVersion  = parseFloat(nAgt.substring(verOffset+5));
+		majorVersion = parseInt(''+fullVersion);
+	}
+
+</script>
+	<!-- 20161003 #1-->
+
+		<script>
+		$(function(){
+
+			$('.dropdown-toggle').click(function(){
+				var $this = $(this),
+					$parent = $this.parent();
+				if($parent.hasClass('open')){
+					$parent.removeClass('open');
+				}else{
+					$parent.addClass('open');
+				}
+				return false;
+			})
+
+
+			$('body').click(function(){
+				$('.dropdown-toggle').parent().removeClass('open');
+				console.log('onblur')
+			})
+
+
+			$('.dropdown-menu a').click(function(){
+				var $href = $(this).attr('href');
+				$href = $href.replace(/javascript:/, "");
+				var hellowWorld=new Function($href);
+				hellowWorld();
+				//console.log('doi')
+				$('.dropdown-toggle').parent().removeClass('open');
+				return false;
+			})
+
+		});
+	</script>
+
+			<!-- Google Analytic  #Start-->
+		<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-36188281-1', 'auto');
+		  ga('require', 'displayfeatures');
+		  ga('send', 'pageview');
+
+		  	
+		</script>
+		<!-- Google Analytic  #End-->
+
+		
+	
+	<!-- Google ADS 再行銷-->
+	
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1EYGRHW7FE"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-1EYGRHW7FE');
+	</script>
+
+		<!--  Facebook Pixel Code  fbq #START-->
+		<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1702901059927961');
+		fbq('track', "PageView");
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=1702901059927961&ev=PageView&noscript=1"
+		/></noscript>
+	<!--  Facebook Pixel Code fbq #End-->
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+		
+		<script type="text/javascript">
+			function FBAddToWishlist () {
+				fbq('track', 'AddToWishlist', {
+				  // content_name: '',
+				  //content_category: '',
+				  //content_ids: ['1234'],
+				  //content_type: 'product',
+				  //value: '',
+				  currency: 'TWD'
+				});
+			}
+		</script>
+	
+
+<!--20170824  Facebook Event Code  #Start -->
+<!--20170824  Facebook Event Code  #End-->
+
+
+<!---->
+	<body style="font-family:Microsoft JhengHei;" onbeforeunload="leave_page_event()">
+
+
+
+<!---->
+	<script language="javascript">
+	var second=0;
+	window.setTimeout("interval();",1000);
+	function interval()
+	{
+		second++;
+		//document.all.page_life_time.value = second+"秒";
+		window.setTimeout("interval();",1000);
+
+		if (second % 60 =='0')
+		{
+		leave_page_event();
+
+		}
+
+	}
+	</script>
+
+<div id="fb-root"></div>
+<script language="javascript">
+		(function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/zh_TW/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '435176376547357',
+            status     : true,
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true
+          });
+
+		  if (typeof facebookInit == 'function') {
+			  facebookInit();
+
+		  }
+
+
+			FB.Event.subscribe('auth.login', function(response) {
+					$.ajax({
+						  type: "POST",
+						  url: "https://www.sharecourse.net/sharecourse/general/user/fbLogin",
+						  success: function(html_chk){
+
+							// location.reload();
+
+						  }
+					});
+
+			});
+
+
+        };
+
+	var accessToken = "";
+	function facebookInit() {
+
+			FB.getLoginStatus(function(response) {
+			  if (response.status === 'connected') {
+				// the user is logged in and has authenticated your
+				// app, and response.authResponse supplies
+				// the user's ID, a valid access token, a signed
+				// request, and the time the access token
+				// and signed request each expire
+				var uid = response.authResponse.userID;
+				accessToken = response.authResponse.accessToken;
+
+
+			  } else if (response.status === 'not_authorized') {
+
+				// the user is logged in to Facebook,
+				// but has not authenticated your app
+			  } else {
+				// the user isn't logged in to Facebook.
+			  }
+			});
+
+
+	}
+
+
+	(function($) {
+	  $.fn.placeholder = function() {
+		if(typeof document.createElement("input").placeholder == 'undefined') {
+		  $('[placeholder]').focus(function() {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+			  input.val('');
+			  input.removeClass('placeholder');
+			}
+		  }).blur(function() {
+			var input = $(this);
+			if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			  input.addClass('placeholder');
+			  input.val(input.attr('placeholder'));
+			}
+		  }).blur().parents('form').submit(function() {
+			$(this).find('[placeholder]').each(function() {
+			  var input = $(this);
+			  if (input.val() == input.attr('placeholder')) {
+				input.val('');
+			  }
+			})
+		  });
+		}
+	  }
+	})(jQuery);
+
+
+	// $(document).ready(
+	// 	function() {
+	// 		//reload_page_list();
+
+	// 		$(".page_prev").attr("title","前10頁");
+	// 		$(".page_next").attr("title","後10頁");
+
+	// 		$(".tooltip_icon").tooltip();
+
+	// 		$(".pop_dialog").popover();
+
+	// });
+
+	function ajax(URL, DATA, func){
+		$.ajax({
+			type: "POST",
+			url: URL,
+			data: DATA,
+			success: function(data){
+				func(data);
+			}
+		});
+	}
+
+
+    function imageResize(obj, w, h) {
+		var height = $(obj).height();
+		var width = $(obj).width();
+		var ratio = width/height;
+
+		if(ratio > 1){ //width>height
+			newHeight = h;
+			newWidth = ratio * newHeight;
+
+			while(newWidth < w){
+				newHeight = newHeight+10;
+				newWidth = ratio * newHeight;
+			}
+
+			$(obj).width(newWidth);
+			$(obj).height(newHeight);
+		}
+		else{ //height>width
+			newWidth = w;
+			newHeight = newWidth / ratio;
+
+			while(newHeight < h){
+				newWidth = newWidth+10;
+				newHeight = newWidth / ratio;
+			}
+
+			$(obj).width(newWidth);
+			$(obj).height(newHeight);
+		}
+
+
+
+
+    }
+
+
+</script>
+
+
+<div id="toolBar">
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.search-m').click(function(){
+			$('.search-m-box').addClass('show');
+		});
+		$(document).on('click', '.navbar-toggle', function () {
+			$('.collapse').toggleClass('in');
+		});
+		// $('.navbar-toggle').click(function(){
+		// 	$('.collapse').toggleClass('in');
+		// });
+		$('.content,#templatemo_main_wrapper').click(function(){
+			$('.search-m-box').removeClass('show');
+			$('.collapse').removeClass('in');
+		});
+	});
+
+	var key = "";
+
+	function changeFilter(filter, val){
+		var caretHTML = "</span><span class='caret' style='float: right;'></span>";
+		var spanHTML = "<span class='filterSelector'>";
+
+		if(filter == "keyword"){
+			location.href="https://www.sharecourse.net/sharecourse/course/view/searchCourse?order=&keyword=" + encodeURI(val);
+		}
+	}
+</script>
+<nav class="sc-navbar navbar navbar-default" role="navigation" data-spy="affix" data-offset-top="0">
+	<div class="container-fluid">
+		<div class="sc-navbar-header navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">選單切換</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="sc-brand navbar-brand" href="https://www.sharecourse.net/sharecourse/general/home/">
+                                <img src="https://www.sharecourse.net/sharecourse/upload/system/logo_tw.png"  class="sc-logo">
+                			</a>
+			<a href="##" class="text-mute search-m hidden-md hidden-lg">
+				<i class="glyphicon glyphicon-search"></i>
+			</a>
+			<div class="search-m-box hidden-md hidden-lg">
+				<form class="form-inline">
+				  <div class="form-group">
+				    <div class="input-group">
+				    	<input type="search" class="form-control searchCourse" placeholder="請輸入關鍵字"><!--請輸入關鍵字-->
+				    	<a class="input-group-addon btn" onClick="changeFilter('keyword', $('.searchCourse').val())">搜尋<!--搜尋--></a>
+				    </div>
+				  </div>
+				</form>
+			</div>
+							<a class="expand-cart" href="https://www.sharecourse.net/sharecourse/payment/ShoppingCart/ShoppingList">
+					<i class="fa fa-shopping-cart"></i>
+					<!--結帳-->
+									</a>
+					</div>
+
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav text-center">
+				<li class="navbar-btn-outline"><a href="https://www.surveycake.com/s/DkKd7">我想開課<!--我想開課--></a>				
+				<li class="search-course">
+					<form class="form-inline" id="myform" method="get" action="https://www.sharecourse.net/sharecourse/course/view/searchCourse" >
+					  <div class="form-group">
+					    
+					    <div class="input-group">
+				    	 <input id="searchKey" name="keyword" type="search" class="form-control" placeholder="請輸入關鍵字" autocomplete="off"><!--請輸入關鍵字-->
+						<a class="input-group-addon btn btn-primary" onclick="document.getElementById('myform').submit();"><i class="glyphicon glyphicon-search"></i></a>
+				    </div>
+					  </div>
+					</form>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right text-center">
+								<li>
+						<a class="collapse-cart" style="padding-top: 9px;" href="https://www.sharecourse.net/sharecourse/payment/ShoppingCart/ShoppingList">
+							<i class="fa fa-shopping-cart" style="font-size: 35px;"></i>
+							<!--結帳-->
+													</a>
+					</li>
+				
+		
+								
+
+														<li class="dropdown"><a href="https://www.sharecourse.net/sharecourse/course/view/reserveList" class="course_svg"><img src="https://www.sharecourse.net/sharecourse/libraries/images/course_svg.svg" alt=""><!--我的課程--></a></li>
+										<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+															<img class="avatar" src="https://www.sharecourse.net/sharecourse/libraries/images/photo_M.jpg">
+														王子謙<!--name -->
+														<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu" style="left: unset;right: -40px;">
+															<li class="text-center"><a href="https://www.sharecourse.net/sharecourse/user/profile/personInfoEdit">帳戶資料<!--帳戶資料--></a></li>
+								<li class="text-center"><a href="https://www.sharecourse.net/sharecourse/course/view/UserMeetingList">我的預約會議</a></li>
+								
+																<li class="text-center"><a href="https://www.sharecourse.net/sharecourse/course/view/reserveList">我的課程<!--我的課程--></a></li>
+																
+														<!--//20190223 @Mou 新增群組&平台管理員權限-->
+							<li class="divider"></li>
+							<li class="text-center"><a href="https://www.sharecourse.net/sharecourse/general/home/announceList/">系統公告<!--系統公告--></a></li>
+							<li class="divider"></li>
+							<li class="text-center"><a class="text-primary" href="https://www.sharecourse.net/sharecourse/general/user/logout">登出<!--登出--></a></li>
+						</ul>
+					</li>
+							</ul>
+		</div>
+	</div>
+</nav>
+
+</div>
+
+<div id="templatemo_header">
+</div>
+
+
+
+<div id="templatemo_main_wrapper">
+	<div id="templatemo_main" class="clearfix">
+			<div><script>
+        function click_material(content_id){
+            // alert("click_material 參數 content_id = "+content_id);
+
+           
+            $.ajax({
+               
+                url:"https://www.sharecourse.net/sharecourse/course/content/click_material/"+2909+"/2/"+"/"+content_id+"/",
+                
+                data:"&content_id="+content_id,
+                
+                type : "POST",
+				
+                dataType:'json',
+				
+            });
+        };
+</script>
+
+<script> var vid='114190';</script>
+<script src="https://www.sharecourse.net/sharecourse/libraries/artDialog/dist/dialog-plus.js"></script>
+
+
+<div class="pageContent" style="min-height: 600px;">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+	<link rel="stylesheet" type="text/css" href="https://www.sharecourse.net/sharecourse//public/fancybox.css">
+  <link href="https://www.sharecourse.net/sharecourse/public/vis/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
+  <script src="https://www.sharecourse.net/sharecourse/public/d3.layout.cloud.js"></script>
+  <script src="https://www.sharecourse.net/sharecourse/public/tag_cloud.js", type='text/javascript'></script>
+  <script src="https://www.sharecourse.net/sharecourse/public/fancybox.js"></script>
+  <script src="https://www.sharecourse.net/sharecourse/public/vis/vis.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://www.sharecourse.net/sharecourse/public/jquery.powertip.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://www.sharecourse.net/sharecourse/public/jquery.powertip.css" />
+	<!--  -->
+	<style>
+		.chapterGroup .chapterContent .textBlock {
+			padding: 5px 0px;
+			margin: 0px 0px 5px 0px;
+			/* display: flex; */
+			align-items: center;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+		}
+		.chapterGroup .chapterContent .textBlock._highlight {
+			background-color: #e0e0e0;
+			border-radius: 6px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+		}
+    /*  */
+    @media (min-width: 768px) {
+      .span3 {
+        width: 100% !important;
+        max-width: 300px !important;
+      }
+      .videoContent.span9 {
+        margin-left: 5px !important;
+        width: calc(100% - 305px) !important;
+      }
+      .videoContent.span9 center {
+        height: 30px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-top: 5px !important;
+      }
+      #videoFrame {
+        border: 0px !important;
+                height: calc(100vh - 130px) !important;
+                max-height: 768px;
+        max-width: unset;
+      }
+    }
+    @media (max-width: 767px) {
+      .videoContent.span9 {
+        margin-top: 5px;
+      }
+    }
+    #playvideo {
+      min-height: 600px;
+		}
+    #videoFrame {
+            min-height: 1200px;
+            
+    }
+
+    /*  */
+	</style>
+	<!--  -->
+  <script>
+	console.log('chapter'+ '17734');
+	 parseFromApi('2909','17734');
+  </script>
+		<!--20150917 start 避免課程發佈時間未到，產生php error訊息-->
+				<!--20150917 end 避免課程發佈時間未到，產生php error訊息-->
+
+		<!--影片瀏覽跳出視窗-->
+		
+		<style>
+	.clearfix:before,.clearfix:after{content:"";display:table}
+	.clearfix:after{clear:both}
+	.clearfix{zoom:1;display:block}
+
+	.courseInnerTitle{ height:auto; background-size: 100% 100%;}
+	.courseInnerTitle .content{ display: flex; min-height: initial;}
+	.courseControlPanel{ height: auto; }
+	.courseControlPanel .active{ border-bottom:1px solid #aaa; border-radius:5px; box-shadow: 2px 2px 5px rgba(0,0,0,.3) inset; padding:7px 10px;}
+	.courseControlPanel .active a{ color:#ff9800; }
+
+	.courseContentBlock { padding: 70px 10px 10px 10px;}
+</style>
+		<script language="javascript">
+		function deafult_course_img()
+		{
+			var img=event.srcElement;
+           img.src="https://www.sharecourse.net/sharecourse/libraries/images/comm/origin_pic.jpg"; //default course image
+           img.onerror=null;  
+        }
+
+			var headerContent = '<div class="courseInnerTitle">' +
+								'	<div class="content">' +
+								'		<div class="imageBlock" style="margin-top:25px;">' +
+								'			<img class="courseImage" src="" / onerror="deafult_course_img()">' +
+								'		</div>' +
+								'		<div class="titleBlock" style="margin-top:25px;">' +
+								'			<p><span class="university"></span></p>' +
+								'			<p><span class="title"></span></p>' +
+								'		</div>' +
+								'	</div>' +
+								'</div>';
+
+			$("#templatemo_middle").hide();
+			$("#templatemo_header").append(headerContent);
+			$("#templatemo_main").css("width", "100%");
+			$("#templatemo_main").css("padding", "0px");
+			$("#tool_main").css("width", "100%");
+
+
+			$(".courseInnerTitle").css("background-image",'url(https://www.sharecourse.net/sharecourse/libraries/images/comm/courseTopBanner_tku.png)');
+			$(".courseInnerTitle .title").html('SC2909 日常疼痛控制 113 (下)'); //設定Header的ident_number
+			$(".courseInnerTitle .university").html('成功大學-SPOC'); //設定Header的課程名稱
+							$(".courseInnerTitle .courseImage").attr("src",'https://www.sharecourse.net/sharecourse/upload/course/2909/d41d8cd98f00b204e9800998ecf8427e908397.png'); //設定Header的背景圖案
+			
+
+			$(".courseInnerTitle").show();
+
+							 			
+		</script>
+
+		<!--  AITUTOR DOWN-->
+
+								<!--  AITUTOR up-->
+
+		<div class="courseMainBlock">
+			<!-- Control Panel block -->
+			<div class="courseControlPanel">
+				<ul>
+					<li  onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/homepage/2909'"><i class="icon-home"></i> <a href="javascript:void(0)">課程公告<!--課程公告--></a></li>
+					<li  onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/schedule/2909'"><i class="icon-calendar"></i> <a href="javascript:void(0)">課程進度<!--課程進度--></a></li>
+					<li class="active" onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909'"><i class="icon-facetime-video"></i> <a href="javascript:void(0)">課程影片與練習<!--課程影片與練習--></a></li>
+
+					
+					
+
+											
+
+					<li  onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/forum/2909'"><i class="icon-comment"></i> <a href="javascript:void(0)">課程討論區<!--課程討論區--></a></li>
+
+					
+					<!-- 先判斷是否有測驗才出現頁籤-->
+					<li  onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/assign/2909'"><i class="icon-edit"></i> <a href="javascript:void(0)">課程作業<!--課程作業--></a></li>
+
+					
+
+					
+
+															<!--<li  onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/about/2909'"><i class="icon-info-sign"></i> <a href="javascript:void(0)">關於課程<!--關於課程</a></li>-->
+					<li  onClick="location.href='https://www.sharecourse.net/sharecourse/course/view/courseInfo/2909'"><i class="icon-info-sign"></i> <a href="javascript:void(0)">課程資訊<!--課程資訊--></a></li>
+
+
+											 										
+						
+					
+
+
+									</ul>
+			</div>
+
+<!--簡訊驗證 -->
+
+
+
+
+			<!-- Start content block -->
+			<div class="courseContentBlock">
+				<script>
+					var discussion_per_page = 5;
+					$(document).ready(function(){
+						//$('.totalBlock').toggle('1'); //預設隱藏討論內容
+						for(var i=0; i<discussion_per_page ;i++){
+							$('.singleBlock:eq('+ i +')').css('display','');
+						}
+						//API data=================================
+						var userId = '199229';
+						var userAccount = 'f74112069@gs.ncku.edu.tw';
+						var courseId = '2909';
+						var chapterId = '17734';
+						var chapterVideoCount = '7';
+						var chapterVideoOrder = '1';
+						var videoId ='114190';
+						var json={};
+						json['action'] = 'access';
+						json['userId'] = userId;
+						json['userAccount'] = userAccount;
+						json['courseId'] = courseId;
+						json['chapterId'] =chapterId;
+						json['page']='chapter_video';
+						json['description'] =chapterVideoOrder+'/'+chapterVideoCount+' video_id_is '+videoId;
+						console.log(json);
+						//access page=====================
+						$.ajax({
+							url: 'page_data',
+							type: 'POST',
+							data: JSON.stringify(json),
+							contentType: 'application/json; charset=utf-8',
+							dataType: 'json',
+							async: true,
+							success: function(msg) {
+									alert(msg);
+							}
+						});
+						// $('#videoDiscussForm').validate({
+						// 	rules:{
+						// 		title: "required",
+						// 		content: "required"
+						// 	}
+						// });
+						// $('#videoResponseForm').validate({
+						// 	rules:{
+						// 		editor2: "required"
+						// 	}
+						// });
+
+														if($("textarea[name=editor2]").length > 0){
+									CKEDITOR.replace("editor2",
+									{
+										 toolbar: [
+											['Source','FontSize', 'TextColor','BGColor','-','Bold', 'Italic','Underline', '-','Link', 'Image','Table','SpecialChar']
+										],
+										 width: "80%",
+										 height: 100,
+										 language: 'zh'
+									});
+								}
+
+							CKEDITOR.replace("editor1",
+							{
+								 toolbar: [
+										['Source','FontSize', 'TextColor','BGColor','-','Bold', 'Italic','Underline', '-','Link', 'Image','Table','SpecialChar']
+									],
+								 width: "80%",
+								 height: 100,
+								 language: 'zh'
+							});
+						
+
+
+					});
+
+					function like(type, cid, button){
+						var URL = "https://www.sharecourse.net/sharecourse/course/content/forumForm/like/"+cid+"?type=" +type;
+						var DATA = "";
+						ajax(URL, DATA, likeSuccess);
+						$(button).attr('disabled',true);
+						$str = $(button).html();
+							$num = parseInt($str.replace('<img style=\"width:15px; height:15px;\" src=https://www.sharecourse.net/sharecourse/libraries/images/icons/1/png/hand-gesture.png><!--<i class=\"icon-plus\"></i>-->', '')) + 1;
+							//$(button).html('<img style=\"width:15px; height:15px;\" src=https://www.sharecourse.net/sharecourse/libraries/images/icons/1/png/hand-gesture.png><!--<i class=\"icon-plus\">--></i>' + $num);
+							$(button).html('<img style=\"width:15px; height:15px;\" src=https://www.sharecourse.net/sharecourse/libraries/images/icons/1/png/hand-gesture.png><i class=\"icon-plus\"></i> 1 ' );
+					}
+
+					function likeSuccess(data){
+
+					}
+
+					function show(obj){
+						//obj = $(obj).parent();
+						id = $(obj).attr('id').replace('show', '');
+
+						if($("#show" + id).css('display') == "none"){
+							$("#show" + id).show();
+							$("#hide" + id).hide();
+						}
+						else{
+							$("#show" + id).hide();
+							$("#hide" + id).show();
+						}
+						//$("#hide" + id).toggle('1000');
+
+						if (CKEDITOR.instances['editor2']) {
+							CKEDITOR.instances['editor2'].destroy();
+						}
+
+						$(".leaveComment .textBlock").empty();
+						$(".leaveComment").hide();
+
+						html = '<textarea name="editor2" style="width: 300px; height: 100px;"></textarea>';
+						$("#leaveComment" + id + " .textBlock").html(html);
+
+						CKEDITOR.replace("editor2",
+						{
+							 toolbar: [
+								['Source','FontSize', 'TextColor','BGColor','-','Bold', 'Italic','Underline', '-','Link', 'Image','Table','SpecialChar']
+							],
+							 width: "80%",
+							 height: 100,
+							 language: 'zh'
+						});
+
+						$("#commentBlock" + id).toggle('1000');
+						$("#leaveComment" + id).toggle('1000');
+						//alert(id);
+					}
+
+					var currentPage = 1;
+					function page(val){
+						location.href = "#discussionAnchor";
+						if(val == 'next'){
+							var nextPage = parseInt(currentPage) + 1;
+							if(nextPage <= 0){
+								changePage(nextPage);
+							}
+						}
+						else if(val == 'prev'){
+							var prevPage = parseInt(currentPage) - 1;
+							if(prevPage >= 1){
+								changePage(prevPage);
+							}
+						}
+						else{
+							changePage(val);
+						}
+					}
+					function changePage(val){
+						var count = $('.singleBlock').length;
+						var start = (val-1) * discussion_per_page;
+						var last = start + discussion_per_page;
+						for(var i=0; i<count ;i++){
+							if(i >= start && i < last){
+								$('.singleBlock:eq('+ i +')').css('display','');
+							}
+							else{
+								$('.singleBlock:eq('+ i +')').css('display','none');
+							}
+						}
+						currentPage = val;
+					}
+
+
+				</script>
+
+
+				<h1>課程影片與練習<!--課程影片與練習--></h1>
+				<input type="hidden" id="has_keyword" value="0"></input>
+
+
+			<input type="hidden" id="courseId" value="2909"></input>
+				<input type="hidden" id="userId" value="199229"></input>
+				<input type="hidden" id="exerciseId" value="0"></input>
+
+
+				<div class="container-fluid" style="padding: 0px;">
+					<div class="row-fluid">
+
+						<div class="span3">
+
+							<script>
+								function setChapterHeading(obj){
+									nowImage = obj.parent().children('.heading').css('background-image');
+
+									if(nowImage.search("images/tree_arrow_down.gif") != -1){
+										obj.parent().children('.heading').css('background-image','url(images/tree_arrow_right.gif)');
+										obj.parent().children('.heading').css('border-bottom','1px solid #CCC');
+									}
+									else{
+										obj.parent().children('.heading').css('background-image','url(images/tree_arrow_down.gif)');
+										obj.parent().children('.heading').css('border-bottom','0px');
+									}
+								}
+							</script>
+
+							<div class="videoControl">
+																											<div class="chapterGroup">
+										    <div class="heading active" onClick="$('.chapterContent').toggle(500,setChapterHeading($(this)));" >
+											    週次1 【第 1 講 - 簡介】疼痛、姿勢、與肌肉失衡
+																						    </div>
+
+
+											
+
+
+												<div class="chapterContent">
+													<div>
+														
+													</div>
+																																										
+																																<div class="textBlock _highlight"><!--目前觀看小節  _highlight 效果-->
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114190" title="1.1 認識疼痛">1.1 認識疼痛</a>
+																	<i style="margin:2px 0px 0px 4px;" class="icon-arrow-left"></i><!--目前觀看小節 -->
+																	
+																	
+
+																</div>
+																																												
+																																<div class="textBlock ">
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114191" title="1.2 止痛機制">1.2 止痛機制</a>
+																	
+																	
+																	
+
+																</div>
+																																												
+																																<div class="textBlock ">
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114192" title="1.3 疼痛發展史">1.3 疼痛發展史</a>
+																	
+																	
+																	
+
+																</div>
+																																												
+																																<div class="textBlock ">
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114193" title="1.4 疼痛肌痙孿惡性循環">1.4 疼痛肌痙孿惡性循環</a>
+																	
+																	
+																	
+
+																</div>
+																																												
+																																<div class="textBlock ">
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114194" title="1.5 疼痛痙攣惡行循環與止痛機制">1.5 疼痛痙攣惡行循環與止痛機制</a>
+																	
+																	
+																	
+
+																</div>
+																																												
+																																<div class="textBlock ">
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114195" title="1.6 姿勢與疼痛">1.6 姿勢與疼痛</a>
+																	
+																	
+																	
+
+																</div>
+																																												
+																																<div class="textBlock ">
+																
+																	<i style="margin:0px 10px 0px 10px;" class="icon-film"></i><a href="https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17734&vid=114196" title="1.7 不良姿勢與肌肉失衡">1.7 不良姿勢與肌肉失衡</a>
+																	
+																	
+																	
+
+																</div>
+																																																								
+													
+												</div>
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17735';" >
+											    週次2 【第 2 講 - 功能性解剖】上交叉與下交叉症候群之問題肌肉
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17736';" >
+											    週次3 【第 2 講 - 功能性解剖】其他問題肌肉
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17737';" >
+											    週次4 【第 3 講 - 建立疼痛自覺系統】姿勢評估、症狀評估
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17738';" >
+											    週次5 【第 3 講 - 建立疼痛自覺系統】肌肉柔軟度評估
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17739';" >
+											    週次6 【第 3 講 - 建立疼痛自覺系統】潛藏肌無力之偵測
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17740';" >
+											    週次7 【第 4 講 - 自我治療簡介】治療原則與方法論
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17741';" >
+											    週次8 【第 5 講 - 基本治療】拉筋運動：上交叉與下交叉症候群緊縮肌群
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17742';" >
+											    週次9 【第 5 講 - 基本治療】拉筋運動：其他緊縮肌群
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17743';" >
+											    週次10 【第 5 講 - 基本治療】肌力訓練運動
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17744';" >
+											    週次11 【第 5 講 - 基本治療】核心肌力訓練運動
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17745';" >
+											    週次12 【第 6 講 - 進階治療】定錨式拉筋與自我按摩：上交叉症候群緊縮肌群
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17746';" >
+											    週次13 【第 6 講 - 進階治療】定錨式拉筋與自我按摩：下交叉症候群與其他緊縮肌群
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17747';" >
+											    週次14 【第 6 講 - 進階治療】定錨式拉筋與自我按摩：其他緊縮肌群
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17748';" >
+											    週次15【第 7 講 - 低頭族與電腦族的煩惱】肩頸疼痛之自我治療
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17749';" >
+											    週次16【第 8 講 - 游泳與投擲運動以及重覆抬舉之隱憂】常見肩痛之防治運動
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17750';" >
+											    週次17 【第 9 講 - 告別工傷假】：神奇的腰椎椎間盤凸出自我復位運動
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17751';" >
+											    週次18 【第 10 講 - 長輩的救星】足底筋膜炎之自我治療自療
+																						    </div>
+
+
+																					</div>
+
+																			<div class="chapterGroup">
+										    <div class="heading " onClick="location.href='https://www.sharecourse.net/sharecourse/course/content/chapter/2909?chid=17752';" >
+											    週次19 【第 11 講】網球肘之自我治療自療
+																						    </div>
+
+
+																					</div>
+
+																								</div>
+						</div>
+						<div class="videoContent span9"  style="margin-left:5px;">
+							
+															
+																			<div id="vt_114190" class="videoTitle" style="display: none;"><h3>1.1 認識疼痛</h3></div>
+									
+								
+																			<div id="vt_114191" class="videoTitle" style="display: none;"><h3>1.2 止痛機制</h3></div>
+									
+								
+																			<div id="vt_114192" class="videoTitle" style="display: none;"><h3>1.3 疼痛發展史</h3></div>
+									
+								
+																			<div id="vt_114193" class="videoTitle" style="display: none;"><h3>1.4 疼痛肌痙孿惡性循環</h3></div>
+									
+								
+																			<div id="vt_114194" class="videoTitle" style="display: none;"><h3>1.5 疼痛痙攣惡行循環與止痛機制</h3></div>
+									
+								
+																			<div id="vt_114195" class="videoTitle" style="display: none;"><h3>1.6 姿勢與疼痛</h3></div>
+									
+								
+																			<div id="vt_114196" class="videoTitle" style="display: none;"><h3>1.7 不良姿勢與肌肉失衡</h3></div>
+									
+																						<div class="videoInnerContent">
+								<script src="https://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script><!-- 20180831  (更新為https連結) 此為練習題「送出檢查」圖示正確、錯誤有關，請勿刪除-->
+							
+
+																											<div id="playvideo" style="width: 100%; text-align: center;">
+
+											<script>
+											var url=window.location.href;
+											var arguments = url.split('?')[1];
+											var argList = arguments.split('&');
+											var arr={};
+											for(var i =0;i<argList.length;i++){
+												var paraName =argList[i].split('=');
+												arr[paraName[0]]=paraName[1];
+											}
+											// console.log(arr);
+
+											//end of access page =================
+											var userId = '199229';
+											var userAccount = 'f74112069@gs.ncku.edu.tw';
+											var courseId = '2909';
+											var chapterId = '17734';
+											var chapterVideoCount = '7';
+											var chapterVideoOrder = '1';
+											var videoId ='114190';
+											var json={};
+											json['userId'] = userId;
+											json['userAccount'] = userAccount;
+											json['courseId'] = courseId;
+											json['chapterId'] =chapterId;
+											json['page']='chapter_video';
+											json['description'] =chapterVideoOrder+'/'+chapterVideoCount+' video_id_is '+videoId;
+
+											window.onbeforeunload = function(e) {//leave page============
+												leave_page_event(); //20180822 呼叫記錄離開時間模組
+												json['action'] = 'leave';
+												//console.log("leave");
+											  $.ajax({
+													url: 'page_data',
+													type: 'POST',
+													data: JSON.stringify(json),
+													contentType: 'application/json; charset=utf-8',
+													dataType: 'json',
+													async: true,
+													success: function(msg) {
+													    alert(msg);
+													}
+												});
+
+
+												var state = player.getPlayerState();
+												var nowTime = player.getCurrentTime();
+												var playRate = player.getPlaybackRate();
+												if(state==1){//離開時撥放器正在撥放
+															// console.log("leave when play");
+															json={};
+												            json['userId']=userId;
+														    json['userAccount']=userAccount;
+														    json['videoId']=videoId;
+														    json['videoTotalTime']=duration;
+														    json['courseId']=courseId;
+														    json['chapterId']=chapterId;
+														    json['chapterVideoCount'] = chapterVideoCount;
+														    json['chapterVideoOrder'] = chapterVideoOrder;
+												            json['action']='leave_when_playing';
+												         	json['videoStartTime']= nowTime;
+												         	json['videoEndTime']=null;
+												         	json['playRate']=playRate;
+
+															$.ajax({
+															url: 'video_data',
+															type: 'POST',
+															data: JSON.stringify(json),
+															contentType: 'application/json; charset=utf-8',
+															dataType: 'json',
+															async: true,
+															success: function(msg) {
+															    alert(msg);
+															}
+															});
+														}
+
+														else if(state==2){//離開時撥放器正在暫停
+															// console.log("leave when pause");
+															json={};
+												            json['userId']=userId;
+														    json['userAccount']=userAccount;
+														    json['videoId']=videoId;
+														    json['videoTotalTime']=duration;
+														    json['courseId']=courseId;
+														    json['chapterId']=chapterId;
+														    json['chapterVideoCount'] = chapterVideoCount;
+														    json['chapterVideoOrder'] = chapterVideoOrder;
+												            json['action']='leave_when_pause';
+												         	json['videoStartTime']= nowTime;
+												         	json['videoEndTime']=null;
+												         	json['playRate']=playRate;
+
+												         	$.ajax({
+															url: 'video_data',
+															type: 'POST',
+															data: JSON.stringify(json),
+															contentType: 'application/json; charset=utf-8',
+															dataType: 'json',
+															async: true,
+															success: function(msg) {
+															    alert(msg);
+															}
+															});
+														}
+
+
+
+											};//end of leave page=============
+											</script>
+											
+																								 	<script>
+															var nowRate = 1;
+													    var earlyTime=0,lateTime;
+													    var isSeek;
+													    var duration;//影片長度
+											        var userId = '199229';
+											        var userAccount = 'f74112069@gs.ncku.edu.tw';
+											        var courseId = '2909';
+											        var chapterId = '17734';
+											        var chapterVideoCount = '7';
+											        var chapterVideoOrder = '1';
+											        var videoId ='114190';
+															var startTime;
+															var timer;
+
+												    // 2. This code loads the IFrame Player API code asynchronously.
+												      var tag = document.createElement('script');
+
+												      tag.src = "https://www.youtube.com/iframe_api";
+												      var firstScriptTag = document.getElementsByTagName('script')[0];
+												      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+												      // 3. This function creates an <iframe> (and YouTube player)
+												      //    after the API code downloads.
+												      var player;
+												      function onYouTubeIframeAPIReady() {
+												            player = new YT.Player('player', {
+												          height: '520',
+												          width: '720',
+												          videoId: 'xM5a2kxyhQM',
+												          playerVars:{
+												          'enablejsapi':1,
+												          'rel':0,
+												          'autohide':1
+												          },
+												          events: {
+												            'onReady': onPlayerReady,
+												            'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+												            'onStateChange': onPlayerStateChange,
+												            'onPlaybackRateChange':onPlaybackRateChange
+												          }
+												        });
+
+												        checkTimeOffset(nowRate);
+
+												      }
+
+												      // 4. The API will call this function when the video player is ready.
+												      function onPlayerReady(event) {
+												        event.target.playVideo();
+												        duration = player.getDuration();
+																startTime = new Date();
+												        // console.log(userId);
+												        // console.log(userAccount);
+												        // console.log(courseId);
+												        // console.log(chapterId);
+												        // console.log(chapterVideoCount);
+												        // console.log(chapterVideoOrder);
+												        // console.log(videoId);
+												      }
+
+												      // 5. The API calls this function when the player's state changes.
+												      //    The function indicates that when playing a video (state=1),
+												      //    the player should play for six seconds and then stop.
+												      //var done = false;
+												        var oldState = player.getPlayerState();
+												      function onPlayerStateChange(event) {
+												      	var json={};//initialize join object
+												        var nowTime = player.getCurrentTime();
+												        var nowState = player.getPlayerState();
+												        json['userId']=userId;
+												        json['userAccount']=userAccount;
+												        json['videoId']=videoId;
+												        json['videoTotalTime']=duration;
+												        json['courseId']=courseId;
+												        json['chapterId']=chapterId;
+												        json['chapterVideoCount'] = chapterVideoCount;
+												        json['chapterVideoOrder'] = chapterVideoOrder;
+												        // console.log("old "+oldState);
+												        // console.log("new "+nowState);
+												        // console.log("now "+nowTime);
+												        // console.log("================");
+												        if((oldState==-1)||(oldState==2 && nowState==1)||(oldState==3 && nowState==1)){
+												           	// console.log("is start");//======================
+												           	json['action']='play';
+												           	json['videoStartTime']= nowTime;
+												           	json['videoEndTime']=null;
+												           	json['playRate']=player.getPlaybackRate();
+												           	console.log(json);
+												            $.ajax({
+														    url: 'video_data',
+														    type: 'POST',
+														    data: JSON.stringify(json),
+														    contentType: 'application/json; charset=utf-8',
+														    dataType: 'json',
+														    async: true,
+														    success: function(msg) {
+														        alert(msg);
+														    }
+															});
+
+												        }
+												        if(oldState ==1 && nowState==2  ){
+												        	json['action']='pause';
+												           	json['videoStartTime']= nowTime;
+												           	json['videoEndTime']=null;
+												           	json['playRate']=player.getPlaybackRate();
+												           	console.log(json);
+
+												           	$.ajax({
+														    url: 'video_data',
+														    type: 'POST',
+														    data: JSON.stringify(json),
+														    contentType: 'application/json; charset=utf-8',
+														    dataType: 'json',
+														    async: true,
+														    success: function(msg) {
+														        alert(msg);
+														    }
+															});
+												            // console.log("is pause");
+												        }
+
+																if(event.data === 1) {
+													        	timer = setInterval(record,5000);
+												        } else {
+												        	record();
+												        	clearInterval(timer);
+												        }
+
+												        oldState = nowState;
+
+												      }
+															function record(){
+													    	console.log('record');
+													    	var json = {}
+													    	var actionArray = ['unstarted', 'End', 'Play', 'Pause', 'Buffering']
+													    	json['userId'] = userId;
+													    	json['startTime'] = startTime;
+													    	json['action'] = actionArray[ player.getPlayerState() + 1 ];
+													    	json['playRate'] = player.getPlaybackRate();
+													    	json['courseId'] = courseId;
+	                                                        json['chapterId'] = chapterId;
+	                                                        json['videoId'] = videoId;
+													    	json['videoTime'] = player.getCurrentTime();
+													    	$.ajax({
+															    url: 'video_time',
+															    type: 'POST',
+															    data: JSON.stringify(json),
+															    contentType: 'application/json; charset=utf-8',
+															    dataType: 'json',
+															    async: true,
+															    success: function(msg) {
+															        alert(msg);
+															    }
+																});
+													  }
+												    function onPlaybackRateChange(event){
+												        var playRate = player.getPlaybackRate();
+												        // var duration = player.getDuration();
+												        var nowTime = player.getCurrentTime();
+												        // console.log("speed is "+playRate);
+												        // console.log("duration is "+duration);
+												        // console.log("nowTime is "+nowTime);
+												        json={};
+												        json['userId']=userId;
+												        json['userAccount']=userAccount;
+												        json['videoId']=videoId;
+												        json['videoTotalTime']=duration;
+												        json['courseId']=courseId;
+												        json['chapterId']=chapterId;
+												        json['chapterVideoCount'] = chapterVideoCount;
+												        json['chapterVideoOrder'] = chapterVideoOrder;
+												        json['action']='change_rate';
+												     	json['videoStartTime']= nowTime;
+												        json['videoEndTime']=null;
+												        json['playRate']=player.getPlaybackRate();
+												        // console.log(json);
+												        $.ajax({
+														 	   	url: 'video_data',
+															    type: 'POST',
+															    data: JSON.stringify(json),
+															    contentType: 'application/json; charset=utf-8',
+															    dataType: 'json',
+															    async: true,
+															    success: function(msg) {
+															        alert(msg);
+															    }
+																});
+												    }
+
+												    function onPlayerPlaybackQualityChange(event){
+												    }
+
+												    function checkTimeOffset(nowRate){
+												        setInterval(function(){
+												            lateTime = player.getCurrentTime();
+												            if(Math.abs(lateTime-earlyTime) > nowRate *5){
+												                isSeek = 1 ; //判斷為seek
+												                json={};
+												                json['userId']=userId;
+														        json['userAccount']=userAccount;
+														        json['videoId']=videoId;
+														        json['videoTotalTime']=duration;
+														        json['courseId']=courseId;
+														        json['chapterId']=chapterId;
+														        json['chapterVideoCount'] = chapterVideoCount;
+														        json['chapterVideoOrder'] = chapterVideoOrder;
+												                json['action']='seek';
+												           		json['videoStartTime']= earlyTime;
+												           		json['videoEndTime']=lateTime;
+												           		json['playRate']=player.getPlaybackRate();
+												           	    $.ajax({
+														 	   	url: 'video_data',
+															    type: 'POST',
+															    data: JSON.stringify(json),
+															    contentType: 'application/json; charset=utf-8',
+															    dataType: 'json',
+															    async: true,
+															    success: function(msg) {
+															        alert(msg);
+															    }
+																});
+
+												           		console.log(json);
+												            }
+												            else{
+												                isSeek = 0;//判斷為沒有seek
+												            }
+												           //  console.log("isSeek: "+isSeek);
+												           //  console.log("nowRate: "+nowRate);
+												           // console.log("early: "+earlyTime);
+												           //  console.log("late: "+lateTime);
+												           // console.log("offset"+(lateTime-earlyTime));
+												            earlyTime = lateTime;
+												            nowRate = player.getPlaybackRate();
+												        },3000);//check every 3 time unit
+
+												    }
+
+												   	window.onbeforeunload = function(e) {
+														leave_page_event(); //20180822 呼叫記錄離開時間模組
+													   // console.log('hi');
+													   alert("hi");
+													   	var state = player.getPlayerState();
+														var nowTime = player.gerCurrentTime();
+														var playRate = player.getPlaybackRate();
+														if(state==1){//離開時撥放器正在撥放
+															json={};
+												            json['userId']=userId;
+														    json['userAccount']=userAccount;
+														    json['videoId']=videoId;
+														    json['videoTotalTime']=duration;
+														    json['courseId']=courseId;
+														    json['chapterId']=chapterId;
+														    json['chapterVideoCount'] = chapterVideoCount;
+														    json['chapterVideoOrder'] = chapterVideoOrder;
+												            json['action']='leave_when_playing';
+												         	json['videoStartTime']= nowTime;
+												         	json['videoEndTime']=null;
+												         	json['playRate']=playRate;
+														}
+
+														if(state==2){//離開時撥放器正在暫停
+															json={};
+												            json['userId']=userId;
+														    json['userAccount']=userAccount;
+														    json['videoId']=videoId;
+														    json['videoTotalTime']=duration;
+														    json['courseId']=courseId;
+														    json['chapterId']=chapterId;
+														    json['chapterVideoCount'] = chapterVideoCount;
+														    json['chapterVideoOrder'] = chapterVideoOrder;
+												            json['action']='leave_when_pause';
+												         	json['videoStartTime']= nowTime;
+												         	json['videoEndTime']=null;
+												         	json['playRate']=playRate;
+														}
+														console.log(json);
+														// $.ajax({
+														//  	   	url: 'video_data',
+														// 	    type: 'POST',
+														// 	    data: JSON.stringify(json),
+														// 	    contentType: 'application/json; charset=utf-8',
+														// 	    dataType: 'json',
+														// 	    async: true,
+														// 	    success: function(msg) {
+														// 	        alert(msg);
+														// 	    }
+														// 		});
+													};
+
+
+												  </script>
+													
+													
+													<iframe id="videoFrame" name="videoFrame"  width="720" height="520" style="border:0px;" src="https://www.sharecourse.net/sharecourse/video/view/plyr_yt/xM5a2kxyhQM" >/" >
+
+													
+													<!--for haung 2016-03-01-->
+																										<!-- <a>199229</a> -->
+													<!-- <a>https://www.youtube.com/embed/xM5a2kxyhQM?wmode=opaque&rel=0&hd=1&autohide=1&autoplay=1&fmt%3D22&enablejsapi=1</a> -->
+													<!-- <a>xM5a2kxyhQM</a> -->
+													<!-- <a>114190</a>
+													<a>1</a>
+													<a>2909</a>
+													<a>17734</a>
+													<a>7</a>
+													<a>1</a> -->
+												 
+																					</div>
+									
+								
+																														
+																					
+																					
+																					
+																					
+																					
+																					
+										
+									
+
+									
+									
+
+
+									<a name="discussionAnchor"></a>
+									<div class="discussBlock" >
+										<div>
+											<div style="height: 50px;">
+												<a href="javascript:void(0)" onClick="$('.totalBlock').toggle('1000');">&#9660;<!--<i class="icon-plus"></i> -->觀看討論內容<!--觀看討論內容--></a>
+												<button style="float: right;" class="btn btn-primary" type="button" onClick="$('.postDialog').toggle('1000');">新增主題<!--新增主題--></button>
+											</div>
+
+										<script type="text/javascript">
+											   <!-- 20190903 檢查發表主題欄位是否輸入-->
+												function check()
+												{
+														if(videoDiscussForm.title.value == '' ||document.getElementById("editor1") == ''  )
+														{
+															var d = dialog({
+																title: '提醒您',
+																content: '主題及發表內容不可空白！'
+															});
+															d.show();
+														}
+														else
+														{	videoDiscussForm.submit();
+														}
+												}
+										</script>
+
+											<div class="postDialog" >
+												<form id="videoDiscussForm" name="" method="post"  target="_blank" action="https://www.sharecourse.net/sharecourse/course/content/forumForm/post/2909?vid=114190&chid=17734">
+													<p><input name="type" type="hidden" value="1" /></p>
+													<p><span style="color:#EEEEEE">主題標題：</span><br><input name="title" id='title' class="span8" type="text" placeholder="主題標題" /></p>
+													<p><span style="color:#EEEEEE">主題內容：</span><textarea name="editor1" id='editor1' style=" height: 100px;"></textarea></p>
+													<p style="color: #FFF;"><input name="anonymous" type="checkbox" /> 匿名發布<!--匿名發布--></p>
+													<p><button class="btn btn-primary" type="button" onclick="check()">送出<!--送出--></button> <button class="btn btn-default" type="button"onClick="$('.postDialog').toggle('1000');">取消<!--取消--></button></p>
+												</form>
+											</div>
+
+										</div>
+										<div class="totalBlock">
+											
+											<div class="pagination pagination-centered" >
+												尚無內容!!<!--尚無內容-->
+																							</div>
+										</div>
+									</div>
+																								</div>
+
+
+							<div></div>
+
+							<script language="javascript">
+																	$("#et_"+0).show();
+									$("#e_"+0).show();
+								
+                //
+                if (getUrlParameter('vid') !== '') {
+                  let vh = document.getElementById('videos').getBoundingClientRect().height + 30;
+                  window.scrollTo(0, vh);
+                }
+
+
+
+
+                function getUrlParameter(name) {
+                  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                  var results = regex.exec(location.search);
+                  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+                };
+							</script>
+
+						</div>
+					</div>
+
+			</div>
+
+			<!-- End content block -->
+
+		</div>
+		<script src="http://188.166.191.153:8084/target/target-script-min.js#anonymous"></script>
+
+ </div>
+ <script type="text/javascript">
+   var LOADING;
+   var PLAYING;
+   function setStatus(status) {
+     LOADING = status.load;
+     PLAYING = status.play;
+     console.log('LOADING', status.load);
+   }
+   $(document).ready(function () {
+     setVPW();
+   });
+   function setRisezeVPW() {
+     $(window).resize(function () {
+       setVPW();
+     });
+   };
+   function setVPW() {
+     console.log('狀態', PLAYING);
+     let W;
+     if (window.outerWidth > 1361) {
+       W = $('#videoFrame')[0].contentWindow.document.getElementById('vid-cont').clientWidth;
+     } else {
+       W = $('#videoFrame')[0].contentWindow.document.getElementsByTagName('body')[0].clientWidth;
+     }
+     let H = (W / 1.7777777777777777) - 40;
+     $('#videoFrame')[0].contentWindow.document.getElementById('vimeo_vimeo_iframe').height = `${ H }`;
+     $('#videoFrame')[0].contentWindow.document.getElementById('vimeo_vimeo_iframe').width = `${ W }`;
+
+     let L_DISPLAY = '';
+     let P_DISPLAY = '';
+     if (LOADING) {
+       L_DISPLAY = 'display: none;';
+     }
+     if (PLAYING) {
+       P_DISPLAY = 'display: none;';
+     }
+
+     $($('#videoFrame')[0].contentWindow.document.getElementById('mep_0')).attr("style","width: "+W+"px; height: "+H+"px; min-height: 400px; min-width: 82px;");
+     $($('#videoFrame')[0].contentWindow.document.getElementsByClassName('mejs__overlay-play')).attr("style", `${ P_DISPLAY }width: ${ W }px; height: ${ H }px; min-height: 400px; min-width: 82px;`);
+   };
+ </script>
+</div>
+    </div> <!-- end of templatemo_main -->
+</div> <!-- end of templatemo_main_wrapper -->
+
+<div id="templatemo_footer_wrapper">
+    <div id="templatemo_footer">
+			<div class="sc-footer">
+		<div class="container">
+			<div class="row">
+									<div class="col-xs-12 col-md-4">
+						<div class="row">
+							<div class="col-xs-12 col-md-8">
+							<div class="sc-logo-ft">
+								<img class="img-responsive" src="https://www.sharecourse.net/sharecourse/libraries/images/new_frame/logo_tw_2.png">
+							</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+							<div class="sc-logo-ft-text">
+								<blockquote>
+									<p class="lead">學聯網致力普及有用的知識，<br>與一流大學和機構提供優質課程。<!--學聯網致力普及有用的知識，<br>與一流大學和機構提供優質課程。--></p>
+								</blockquote>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="row">
+							<div class="col-xs-12 col-md-8">
+								<div class="row">
+									<div class="col-xs-12"><h3>關於<!--關於--></h3></div>
+									<div class="col-xs-12 col-md-6">
+										<ul class="list-unstyled">
+											<li><a href="https://www.sharecourse.net/sharecourse/general/home/aboutUs">關於我們<!--關於我們--></a></li>
+											<li><a href="https://www.sharecourse.net/sharecourse/general/home/contactUs" onClick="f=true;">聯絡我們<!--聯絡我們--></a></li>
+											<li><a href="https://www.sharecourse.net/sharecourse/general/home/FAQ/1">常見問題<!--常見問題--></a></li>
+											<li><a href="https://www.surveycake.com/s/DkKd7">我想開課<!--我想開課--></a></li>										</ul>
+									</div>
+									<div class="col-xs-12 col-md-6">
+										<ul class="list-unstyled">
+											<li><a href="https://www.sharecourse.net/sharecourse/general/home/information/privacy">隱私權政策<!--隱私權政策--></a></li>
+											<li><a href="https://www.sharecourse.net/sharecourse/general/home/information/statement">服務條款<!--服務條款--></a></li>
+											<!--<li><a href="https://www.sharecourse.net/sharecourse/upload/doc/ShareCourse_student_manual.pdf">學生使用手冊<!--學生使用手冊</a></li>-->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-4">
+								<div class="row">
+									<div class="col-xs-12"><h3>社群<!--社群--></h3></div>
+									<div class="col-xs-12">
+										<ul class="list-unstyled">
+											<li><a href="https://www.facebook.com/ShareCourse/">Facebook</a></li>
+											<li><a href="https://www.youtube.com/channel/UCJxKLK_9YC8w6c0vUY_6Mag">YouTube</a></li>
+											<li><a href="https://blog.sharecourse.net/blog">部落格<!--部落格--></a></li>
+											<li><a href="http://eepurl.com/7AvrD">電子報</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="sc-facebook">
+							<div class="fb-page" data-href="https://www.facebook.com/ShareCourse/" data-width="340" data-height="220" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+								<blockquote cite="https://www.facebook.com/ShareCourse/" class="fb-xfbml-parse-ignore">
+									<a href="https://www.facebook.com/ShareCourse/">ShareCourse 學聯網</a>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+							</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<p class="text-center"><small>Copyright©2025 Gordon Smart Technology Corp<!--捷鎏科技-->. All Rights Reserved.</small></p>
+	</div>
+
+    </div> <!-- end of templatemo_footer -->
+</div> <!-- end of templatemo_footer_wrapper -->
+
+
+<div id="prograss_window">
+
+</div>
+
+<div id="confirm_window" >
+	<div class="confirm_title"></div>
+	<div class="confirm_content">
+
+	</div>
+	<div class="DivtoCenter btn_container">
+		<input type="button" class="btn dialog_red_btn confirm_cancel " value="取消" />
+		<input type="button" class="btn btn-primary dialog_green_btn confirm_ok " value="確定" />
+	</div>
+	<div class="dialog_progress progress progress-striped active">
+			<div class="bar" style="width: 100%;">資料處理中<!--資料處理中-->...</div>
+	</div>
+</div>
+
+
+<div id="process_window" >
+	<div><label class="uploadFilename"></label>檔案上傳中... <!--圖片上傳中...--></div>
+	<div class="progress-striped active">
+			<div class="bar" style="width: 0%; height: 15px;"></div>
+	</div>
+</div>
+
+<div id="myWindow" class="modal hide">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class="myWindowTitle"></h3>
+  </div>
+  <div class="modal-body myWindowBody">
+
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">取消<!--取消--></a>
+    <a style="color: white" href="#" class="btn btn-primary">確定<!--確定--></a>
+  </div>
+</div>
+
+
+<div id="passwordWindow" class="modal hide" >
+  <div class="modal-header">
+    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+    <h3 class="passwordWindowTitle"></h3>
+  </div>
+  <div class="modal-body passwordWindowBody">
+    請輸入密碼<!--請輸入密碼:--> <input type="password" id="passwordWindowPassword"/>
+	<p id="passwordWindowMsg" style="color: red;"></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn cancel" data-dismiss="modal" aria-hidden="true">取消<!--取消--></a>
+    <a style="color: white" href="#" class="btn btn-primary">確定<!--確定--></a>
+  </div>
+</div>
+
+<div id="processProgressWindow" class="modal hide">
+  <div class="modal-header">
+    <h3 class="myWindowTitle">等待訊息<!--等待訊息--></h3>
+  </div>
+  <div class="modal-body myWindowBody">
+		<div class="progress progress-striped active">
+			<div class="bar" style="width: 100%;">資料處理中...<!--資料處理中-->......
+			</div>
+		</div>
+  </div>
+  <div class="modal-footer">
+
+  </div>
+</div>
+
+
+<div id="videoPlayWindow" class="modal hide" style="width: 760px; height: 630px;">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onClick="$('#videoFrame').attr('src','');">&times;</button>
+	<h3>介紹影片<!--介紹影片--></h3>
+  </div>
+  <div class="modal-body" style="width:760; max-height: 580px;">
+		<iframe id="videoFrame" width="730" height="530" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" onClick="$('#videoPlayWindow').modal('hide'); $('#videoFrame').attr('src','');">關閉<!--關閉--></a>
+  </div>
+</div>
+
+
+</body>
+</html>
